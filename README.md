@@ -43,7 +43,7 @@ Our team is using **Lean**, an Agile methodology focused on maximizing customer 
 - **Customer Validation:** Each increment is demoed to the customer at progress meetings.
 - **Continuous Improvement:** Weekly retrospectives to identify and remove waste.
 
-See [docs/lean-methodology.md](docs/lean-methodology.md) for the full methodology, value stream map, workflow, metrics, and timeline.
+See [docs/Lean-Methodology.md](docs/Lean-Methodology.md) for the full methodology, value stream map, workflow, metrics, and timeline.
 
 ## Team
 
