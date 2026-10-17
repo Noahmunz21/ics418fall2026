@@ -33,22 +33,27 @@ The Business Department would like the signage to support the following. These f
 | 6 | **Events & Marketing** | Advertise events, special occasions, and department announcements |
 | 7 | **Others (TBD)** | Additional features to be identified with the customer |
 
-## Agile Process
+## Agile Methodology: Lean
 
-- **Product Backlog** — Features above broken into user stories (e.g., *"As a student, I want to find a room number on the directory so I can get to class on time."*) and prioritized with the customer.
-- **Sprints** — Short, time-boxed iterations, each producing a demonstrable increment.
-- **Sprint Reviews** — Progress demonstrated to the customer for feedback.
-- **Retrospectives** — Team reflects on what worked and what to improve.
-- **Tracking** — Backlog and sprint progress tracked via GitHub Issues / Projects *(update if using another tool)*.
+Our team is using **Lean**, an Agile methodology focused on maximizing customer value while eliminating waste.
+
+- **MVP first:** Program promotion, building directory, and UHMC website access, then the remaining features in small batches.
+- **Value Stream Map:** Shows how each feature flows from customer need to the signage, and where waste can be cut.
+- **Kanban Board:** Tracks work with work-in-progress (WIP) limits so the team stays focused.
+- **Customer Validation:** Each increment is demoed to the customer at progress meetings.
+- **Continuous Improvement:** Weekly retrospectives to identify and remove waste.
+
+See [docs/lean-methodology.md](docs/lean-methodology.md) for the full methodology, value stream map, workflow, metrics, and timeline.
 
 ## Team
 
+**Team C**
+
 | Name | Role |
 | --- | --- |
-| _TBD_ | _e.g., Scrum Master_ |
-| _TBD_ | _e.g., Product Owner liaison_ |
-| _TBD_ | _e.g., Developer_ |
-| _TBD_ | _e.g., Developer / QA_ |
+| Coralia Montalvo | _TBD_ |
+| Lily Gannone | _TBD_ |
+| Noah Munz | _TBD_ |
 
 ## Tech Stack
 
@@ -60,7 +65,8 @@ _To be updated as the project develops._
 
 ```
 /
-├── docs/        # Requirements, user stories, diagrams, meeting notes
+├── docs/        # Methodology, requirements, diagrams, meeting notes
+│   └── lean-methodology.md
 ├── src/         # Application source code
 └── README.md
 ```
@@ -71,7 +77,7 @@ _Setup and run instructions will be added once the tech stack is selected._
 
 ## Project Status
 
-🚧 **Planning** — Gathering requirements and building the initial product backlog.
+🚧 **Planning** — Lean methodology selected; gathering requirements and building the initial product backlog.
 
 ---
 
