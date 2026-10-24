@@ -1,0 +1,262 @@
+/* Include padding and borders in element widths to keep the layout predictable. */
+* {
+  box-sizing: border-box;
+}
+
+/* Use local system fonts and a readable base size without external downloads. */
+body {
+  margin: 0;
+  background-color: #f3f7fa;
+  color: #172b3a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+/* Keep headings readable while allowing long titles to wrap. */
+h1,
+h2 {
+  line-height: 1.25;
+}
+
+/* Match the header background to the supplied white UHMC logo. */
+.page-header {
+  padding: 40px 24px;
+  background-color: #02506d;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Keep the main title prominent without depending on a particular screen size. */
+.page-header h1 {
+  margin: 12px 0;
+  font-size: 2rem;
+}
+
+/* Limit line length and leave space around the main content. */
+main {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* Stack the main choices for the portrait kiosk and smaller screens. */
+.section-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Make each entire navigation card a large touch target. */
+.navigation-link {
+  min-width: 0;
+  padding: 28px;
+  border: 2px solid #02506d;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #02506d;
+  text-decoration: none;
+}
+
+/* Put the availability text below each navigation title. */
+.navigation-link strong,
+.navigation-link span {
+  display: block;
+}
+
+/* Make navigation titles stand out from the availability messages. */
+.navigation-link strong {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+/* Keep incomplete-feature notices easy to read. */
+.development-notice {
+  margin: 28px 0;
+}
+
+/* Separate the temporary destinations with consistent spacing and borders. */
+.information-section {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #8097a6;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+/* Avoid extra blank space above each destination heading. */
+.information-section h2 {
+  margin-top: 0;
+}
+
+/* Provide a large, recognizable Home link at every destination. */
+.home-link {
+  display: inline-block;
+  min-height: 56px;
+  padding: 12px 16px;
+  color: #02506d;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Give mouse users feedback without requiring hover to understand a link. */
+.navigation-link:hover,
+.home-link:hover {
+  background-color: #e7f1f7;
+}
+
+/* Show keyboard focus clearly using an outline supported by common browsers. */
+a:focus {
+  outline: 4px solid #955000;
+  outline-offset: 4px;
+}
+
+/* Highlight the destination selected through a navigation link. */
+.information-section:target {
+  border: 3px solid #02506d;
+}
+
+/* Keep the skip link out of the layout until a keyboard user selects it. */
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: -10000px;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  color: #02506d;
+}
+
+/* Reveal the skip link when it receives keyboard focus. */
+.skip-link:focus {
+  left: 8px;
+}
+
+/* Keep the footer visually quiet and consistent with the main content. */
+.page-footer {
+  padding: 16px 24px;
+  text-align: center;
+}
+
+/* Preserve the supplied logo's square proportions in the homepage header. */
+.header-logo {
+  width: 120px;
+  height: auto;
+}
+
+/* Hide inactive screens even though the overlay normally uses a flex layout. */
+[hidden] {
+  display: none !important;
+}
+
+/* Fill the browser window without depending on the kiosk's resolution. */
+.screen-overlay {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #02506d;
+  color: #ffffff;
+  text-align: center;
+  overflow: auto;
+}
+
+/* Keep the welcome logo prominent and preserve its original proportions. */
+.screen-logo {
+  width: 38vw;
+  max-width: 380px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Leave most slideshow space for the photographs. */
+.idle-logo {
+  width: 80px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Give photographs flexible space and keep instructions visible. */
+.slideshow-frame {
+  display: flex;
+  flex: 0 1 auto;
+  height: 70vh;
+  min-height: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+/* Fit each complete photograph without cropping or changing its proportions. */
+#slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Use large, readable buttons for both touchscreen and keyboard interaction. */
+.screen-overlay button {
+  flex-shrink: 0;
+  min-height: 64px;
+  padding: 16px 32px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #02506d;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Keep button focus visible against the dark slideshow background. */
+button:focus {
+  outline: 4px solid #ffd46b;
+  outline-offset: 4px;
+}
+
+/* Center welcome text with comfortable spacing on a tall screen. */
+#welcome-screen h1 {
+  margin: 12px 0 36px;
+  font-size: 2rem;
+}
+
+/* Use larger type when the portrait screen has room, with readable defaults above. */
+@media (min-width: 800px) and (min-height: 1000px) {
+  /* Increase the shared text size for viewing at a standing distance. */
+  body {
+    font-size: 26px;
+  }
+
+  /* Give the main navigation a clear, consistent reading size. */
+  .navigation-link strong {
+    font-size: 2rem;
+  }
+
+  /* Scale the welcome heading along with the larger portrait layout. */
+  #welcome-screen h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Share a row on wide landscape displays while keeping portrait choices stacked. */
+@media (min-width: 1100px) and (orientation: landscape) {
+  /* Allow the three choices to use the available horizontal space. */
+  .section-navigation {
+    flex-direction: row;
+  }
+
+  /* Give the cards equal room without imposing a fixed screen width. */
+  .navigation-link {
+    flex: 1;
+  }
+}
