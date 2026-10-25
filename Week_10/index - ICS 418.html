@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Set the page title, text encoding, and shared stylesheet. -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UHMC Business Department</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Keep the welcome screen visible until the visitor deliberately enters. -->
+  <div id="welcome-screen" class="screen-overlay" role="dialog" aria-modal="true" aria-labelledby="welcome-heading">
+    <img class="screen-logo" src="assets/Branding%20Image%205.png" alt="UHMC">
+    <p>University of Hawaiʻi Maui College</p>
+    <h1 id="welcome-heading">Welcome to the<br>Business Department</h1>
+    <button id="begin-button" type="button" disabled>Preparing interface…</button>
+    <noscript><p>JavaScript must be enabled to use this kiosk interface.</p></noscript>
+  </div>
+
+  <!-- Cover the interface during inactivity; one touch returns to Home. -->
+  <div id="idle-screen" class="screen-overlay" hidden role="dialog" aria-modal="true" aria-label="Campus slideshow">
+    <img class="idle-logo" src="assets/Branding%20Image%205.png" alt="UHMC">
+    <div class="slideshow-frame">
+      <img id="slideshow-image" alt="">
+      <p id="slideshow-error" hidden>Campus photographs are currently unavailable.</p>
+    </div>
+    <button id="explore-button" type="button">Touch to Explore</button>
+  </div>
+
+  <!-- Keep the existing homepage together so it can be hidden from keyboard users while idle. -->
+  <div id="homepage" hidden>
+  <!-- Let keyboard users move directly to the main content. -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Identify the department and provide a return point for Home links. -->
+  <header class="page-header" id="home">
+    <img class="header-logo" src="assets/Branding%20Image%205.png" alt="UHMC"><p>University of Hawaiʻi Maui College</p>
+    <h1>Business Department</h1>
+    <p>Welcome. Choose a section below to see its current availability.</p>
+  </header>
+
+  <!-- Keep the initial navigation and availability messages together. -->
+  <main id="main-content">
+    <!-- These links open real sections on this page while separate pages are pending. -->
+    <nav class="section-navigation" aria-label="Department information">
+      <a class="navigation-link" href="#programs">
+        <strong>Business Programs</strong>
+        <span>Business Administration, Hospitality &amp; Tourism, Accounting, and ABIT.</span>
+      </a>
+      <a class="navigation-link" href="#directory">
+        <strong>Building Directory</strong>
+        <span>Room information is not yet available.</span>
+      </a>
+      <a class="navigation-link" href="#website">
+        <strong>UHMC Website</strong>
+        <span>Website access is not yet available.</span>
+      </a>
+    </nav>
+
+    <!-- Explain the limits of this early version before visitors explore it. -->
+    <p class="development-notice">This interface is in development. Business Programs shows draft content pending department review; the other sections are not yet available.</p>
+
+    <!-- Draft program summaries from maui.hawaii.edu; confirm wording with the Business Department before deployment. -->
+    <section class="information-section" id="programs" aria-labelledby="programs-heading">
+      <h2 id="programs-heading">Business Programs</h2>
+      <p>Explore the programs offered through the UHMC Business Department.</p>
+
+      <!-- One summary card per program, in the order listed in the project requirements. -->
+      <div class="program-list">
+        <article class="program-card" aria-labelledby="program-busc">
+          <h3 id="program-busc">Business Administration</h3>
+          <p class="program-credentials">Certificates of Competence · Certificate of Achievement · Associate in Applied Science (AAS)</p>
+          <p>Build skills in entrepreneurship, accounting, and management to grow a business career or start your own small business. The AAS can transfer to bachelor’s programs at UHMC or UH West Oʻahu.</p>
+          <p class="program-highlight"><strong>Career paths:</strong> business owner, manager, retail, sales, and marketing</p>
+        </article>
+
+        <article class="program-card" aria-labelledby="program-host">
+          <h3 id="program-host">Hospitality &amp; Tourism</h3>
+          <p class="program-credentials">Associate in Applied Science (AAS)</p>
+          <p>Prepare for leadership roles in hospitality, one of Hawaiʻi’s largest industries.</p>
+          <p class="program-highlight"><strong>Highlight:</strong> accredited by the Accreditation Commission for Programs in Hospitality Administration (ACPHA)</p>
+        </article>
+
+        <article class="program-card" aria-labelledby="program-acc">
+          <h3 id="program-acc">Accounting</h3>
+          <p class="program-credentials">Associate in Applied Science (AAS) · Certificate of Achievement (CA)</p>
+          <p>Every business needs accounting. Train for careers with small businesses, hotels, service industries, and other organizations on Maui and beyond.</p>
+          <p class="program-highlight"><strong>Next step:</strong> with further education, graduates can advance to accountant or auditor roles</p>
+        </article>
+
+        <article class="program-card" aria-labelledby="program-abit">
+          <h3 id="program-abit">Applied Business &amp; Information Technology (ABIT)</h3>
+          <p class="program-credentials">Bachelor of Applied Science (BAS)</p>
+          <p>A hybrid bachelor’s degree combining business, entrepreneurship, and technology skills, with online and hybrid options.</p>
+          <p class="program-highlight"><strong>Also offered:</strong> certificates in data science and cybersecurity</p>
+        </article>
+      </div>
+
+      <!-- Record where the draft content came from so it can be verified before deployment. -->
+      <p class="content-source">Program information summarized from maui.hawaii.edu (October 2026). Pending Business Department review.</p>
+      <a class="home-link" href="#home">Return to Home</a>
+    </section>
+
+    <!-- Reserve a destination for verified directory information in a later increment. -->
+    <section class="information-section" id="directory" aria-labelledby="directory-heading">
+      <h2 id="directory-heading">Building Directory</h2>
+      <p>The building directory has not been added yet.</p>
+      <a class="home-link" href="#home">Return to Home</a>
+    </section>
+
+    <!-- Keep external browsing unavailable until its kiosk behavior has been reviewed. -->
+    <section class="information-section" id="website" aria-labelledby="website-heading">
+      <h2 id="website-heading">UHMC Website</h2>
+      <p>Website access has not been enabled. It needs to be reviewed and tested in the kiosk’s default browser.</p>
+      <a class="home-link" href="#home">Return to Home</a>
+    </section>
+  </main>
+
+  <!-- Identify this version without displaying private team or visitor information. -->
+  <footer class="page-footer">
+    <p>UHMC Business Department · Initial interface</p>
+  </footer>
+  </div>
+  <!-- Set up behavior after all screen elements exist. -->
+  <script src="kiosk.js"></script>
+</body>
+</html>
