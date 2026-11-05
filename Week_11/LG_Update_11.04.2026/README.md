@@ -2,7 +2,7 @@
 
 Team C's ICS 418 System Analysis and Design project for the University of Hawaiʻi Maui College Business Department.
 
-The project is being developed incrementally using Lean methodology for eventual use on two touchscreen kiosks in the Ka Lama building. This first iteration provides the interface foundation; it is not the completed MVP or a verified public deployment. <b>Please note that this is a first, quickly implemented draft-- team members, please feel free to edit, rewrite, remove, and add content as needed. </b>
+The project is being developed incrementally using Lean methodology for eventual use on two touchscreen kiosks in the Ka Lama building. This first iteration provides the interface foundation; it is not the completed MVP or a verified public deployment. <b>Please note that this is  quickly implemented draft-- team members, please feel free to edit, rewrite, remove, and add content as needed. </b>
 
 ## Run locally
 
