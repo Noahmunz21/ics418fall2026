@@ -22,7 +22,6 @@ Built on the November 14 version to make sections easier to reach and the automa
 - **Building Directory:** Added a keypad hint and a collapsible Room 207 example. Entering 207 switches to the second floor and highlights the room.
 - **Shared kiosk reminder:** Added a small note in UHMC Website and Job Opportunities directing visitors to their phones for sign-ins and personal information.
 - **Automatic Student Survey:** Softened the panel background and shadow, refined heading and answer spacing, and matched the Submit and Skip corners to the kiosk’s buttons. Survey timing and submission behavior remain the same.
-- **Logo:** Tapping the logo returns to Home, and the logo is now a Home link in the pinned header.
 
 ## Week 13 update (Noah, November 14, 2026)
 
